@@ -67,3 +67,7 @@ footer{
 .bg-this{
     background-color: rgb(13, 130, 177);
 }
+
+.bg-bomb{
+    background-color: red;
+}
