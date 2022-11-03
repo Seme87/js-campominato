@@ -35,18 +35,18 @@ for( i= 1; i <= 100; i++ ){
     boardCell.classList.add("board-number")
     // AGGIUNGO EVENTO CLICK
     boardCell.addEventListener("click", function(){
-        
-        // console.log(listbomb[0])
-        //  console.log(this.innerHTML)
+        // SALVO IN UNA VARIABILE LA CONVERSIONE IN NUMERO C0NTENUTO NELL'ELEMENTO CLICCATO DALL'UTENTE
+        const numberConvert= Number(this.innerHTML)
 
-        //  console.log("9999")
-        // console.log(9999)
-
-        if( listbomb.includes Number(this.innerHTML)){
-           
+        // DICHIARO UNA CONDIZIONE CHE SE L'ELEMTNO CONVERTITO FA PARTE DELLA LISTA BOMBA ALLORA:
+        if( listbomb.includes(numberConvert)){
+            // AGGIUNGO AL CONTENUTO CLICCATO NELL'ELEMENTO LA CLASSE BG BOMB CHE DA BG RED IN CSS
             this.classList.add("bg-bomb")
+            // AGGIUNGO UN ALLERT CHE DICHIARA LA SCONFITTA IN QUANTO HO PRESO UN NUMERO BOMBA
+            alert("Hai pestato una Bomba.Hai perso!")
+            
         }else{
-            //AGGIUNG ALL'ELEMENTO CLICCATO LA CLASSE PER IL BG
+            //SE LA CONDIZIONE NON è VERA AGGIUNG0 ALL'ELEMENTO CLICCATO LA CLASSE PER IL BG
             this.classList.add("bg-this")
             //MESSAGGIO IN CONSOLE CON N DI CELLA CLICCATA
             console.log(this.innerHTML)
