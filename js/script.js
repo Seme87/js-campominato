@@ -36,7 +36,10 @@ for( i= 1; i <= 100; i++ ){
     // AGGIUNGO EVENTO CLICK
     boardCell.addEventListener("click", function(){
 
-        if( this === listbomb.splice() ){
+         
+
+        if( listbomb.includes(this.innerHTML)){
+           
             this.classList.add("bg-bomb")
         }
         //AGGIUNG ALL'ELEMENTO CLICCATO LA CLASSE PER IL BG
