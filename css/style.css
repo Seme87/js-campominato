@@ -1,0 +1,69 @@
+/*----------------------
+        RESET
+-----------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*----------------------
+        RESET
+-----------------------*/
+
+
+/*----------------------
+       STRUCTURE
+-----------------------*/
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+header{
+    height: 100px;
+    
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7fffd4;
+    flex-grow: 1;
+}
+
+footer{
+    padding: 1rem;
+}
+
+/*----------------------
+       STRUCTURE
+-----------------------*/
+
+
+
+/*----------------------
+       MAIN
+-----------------------*/
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 600px;
+    width: 600px;
+    background-color: aliceblue;
+}
+
+.board-number{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 1px solid black;
+}
+
+.bg-this{
+    background-color: rgb(13, 130, 177);
+}
