@@ -35,17 +35,23 @@ for( i= 1; i <= 100; i++ ){
     boardCell.classList.add("board-number")
     // AGGIUNGO EVENTO CLICK
     boardCell.addEventListener("click", function(){
+        
+        // console.log(listbomb[0])
+        //  console.log(this.innerHTML)
 
-         
+        //  console.log("9999")
+        // console.log(9999)
 
-        if( listbomb.includes(this.innerHTML)){
+        if( listbomb.includes Number(this.innerHTML)){
            
             this.classList.add("bg-bomb")
+        }else{
+            //AGGIUNG ALL'ELEMENTO CLICCATO LA CLASSE PER IL BG
+            this.classList.add("bg-this")
+            //MESSAGGIO IN CONSOLE CON N DI CELLA CLICCATA
+            console.log(this.innerHTML)
         }
-        //AGGIUNG ALL'ELEMENTO CLICCATO LA CLASSE PER IL BG
-        this.classList.add("bg-this")
-        //MESSAGGIO IN CONSOLE CON N DI CELLA CLICCATA
-        console.log(this.innerHTML)
+        
     })
     // VADO AD APPENDERE L'ELEMENTO CREATO IN JS IN HTML
     boardContainer.append(boardCell);
